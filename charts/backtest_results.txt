@@ -1,0 +1,31 @@
+BACKTEST RESULTS  [REAL data]  (1 MW per trade, EUR)
+Rule: buy evening hours when the wind surprise 2h earlier is below -1.5 std (-1,320 MW)
+Trading cost assumed: 1.0 EUR/MWh
+'Spikes' = the biggest 1% of price moves (bigger than +/-470 EUR/MWh)
+
+Number of trades:          90
+Total profit:              8,076 EUR
+Average per trade:         89.7 EUR
+Median (typical) trade:    -2.2 EUR
+Average WITHOUT spikes:    2.4 EUR
+Win rate:                  49%
+Profit factor:             4.64  (above 1 = wins bigger than losses)
+Worst losing streak:       12 trades in a row
+Biggest drop (drawdown):   -1,394 EUR
+Sharpe ratio:              3.37
+
+Is the wind signal really helping? Compare with no signal at all:
+                               avg   median  no spikes
+  Buy EVERY evening hour      -4.5    -24.2      -21.5
+  Buy only with signal        89.7     -2.2        2.4
+
+Does the result depend on the exact threshold? (robustness check)
+    std      MW  trades     avg  median  no spikes  win %
+   -0.5    -440     793     7.2   -21.9      -17.4     33
+   -1.0    -880     273    22.7   -18.1      -11.3     37
+   -1.5  -1,320      90    89.7    -2.2        2.4     49
+   -2.0  -1,760      28   287.9    49.7       29.1     75
+   -2.5  -2,200       6   186.3    72.1       56.6     83
+
+Losing months: 7 of 19
+Worst month:  2026-03 (-668 EUR)

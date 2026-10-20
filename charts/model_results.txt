@@ -1,0 +1,12 @@
+Data: REAL
+Trained on 2024-10-08 to 2026-05-23
+Tested on  2026-05-23 to 2026-10-18
+
+Average error, lazy guess (yesterday's price):   33.6 EUR/MWh
+Average error, my model:                        35.6 EUR/MWh
+-> My model is -6% more accurate than the lazy guess.
+
+What the model learned (effect on price, EUR/MWh):
+  +1 GW more wind forecast  -> -13.17
+  +1 GW more solar forecast -> -25.49
+  weekend instead of weekday -> -21.02
